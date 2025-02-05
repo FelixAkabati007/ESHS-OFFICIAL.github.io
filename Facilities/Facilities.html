@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejisuman Senior High School</title>
+    <link rel="icon" type="image/x-icon" href="imgs/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="../ai-assistant.css" />
+    <script src="js/checkStorageSupport.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        new SchoolAIAssistant();
+      });
+    </script>
+    <style>
+      /* Global Styles */ body { font-family: 'Lora', serif; background-color: #f4f4f9; color: #333; } /* Course Section Styles */ #fh5co-course { background-color: #ffffff; padding: 60px 30px; border-radius: 15px; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); margin-bottom: 60px; } #fh5co-course .fh5co-heading h2 { font-size: 2.5rem; color: #007bff; } #fh5co-course .fh5co-heading p { font-size: 1.1rem; color: #555; } .course { background-color: #ffffff; border: 1px solid #ddd; border-radius: 15px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; } .course:hover { transform: translateY(-5px); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); } .course-img { width: 100%; height: 200px; background-size: cover; background-position: center; } .desc { padding: 20px; } .desc h3 a { color: #007bff; font-size: 1.5rem; } .desc p { font-size: 1rem; color: #666;.btn-course { background-color: #007bff; color: #ffffff; border: none; border-radius: 30px; /* Rounded edges for sleek look */ font-size: 0.9rem; font-weight: bold; padding: 10px 20px; /* Spacious padding for modern look */ transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition */ } .btn-course:hover { background-color: #0056b3; /* Darker shade on hover */ transform: translateY(-3px); /* Slight lift on hover */ } /* Facilities Section Styles */ .facilities-section { background-color: #ffffff; padding: 60px 30px; border-radius: 15px; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); } .facilities-section h1, .facilities-section h3 { color: #007bff; } .facilities-section p { color: #555; line-height: 1.8; margin-bottom: 20px; font-size: 1.1rem; } .facilities-section .img-fluid { border-radius: 10px; /* Rounded edges for images */ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */ margin-bottom: 15px; /* Spacing below images */ transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition */ width: 100%; /* Increase image width */ height: auto; /* Maintain aspect ratio */ } .facilities-section .img-fluid:hover { transform: scale(1.05); /* Slight zoom on hover */ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */ } .embed-responsive { margin-top: 20px; } /* Responsive Adjustments */ @media (max-width: 768px) { #fh5co-course, .facilities-section { padding: 30px 15px; /* Adjusted padding for smaller screens */ } #fh5co-course .fh5co-heading h2 { font-size: 2rem; /* Adjusted font size for smaller screens */ } #fh5co-course .course-img { height: 150px; /* Adjusted image height for smaller screens */ } .btn-course { padding: 8px 16px; /* Adjusted padding for smaller screens */ font-size: 0.8rem; /* Adjusted font size for smaller screens */ } .facilities-section h1, .facilities-section h3 { font-size: 1.5rem; /* Adjusted font size for smaller screens */ } .facilities-section p { font-size: 1rem; /* Adjusted font size for smaller screens */ } .facilities-section .img-fluid { margin-bottom: 10px; /* Adjusted spacing for smaller screens */ } .embed-responsive { margin-top: 15px; /* Adjusted margin for smaller screens */ } }
+    </style>
+    <style>
+      /* Global Styles */
+      body {
+        font-family: "Lora", serif;
+        background-color: #f4f4f9;
+        color: #333;
+      }
+
+      /* Facilities Section Styles */
+      .facilities-section {
+        background-color: #ffffff;
+        padding: 60px 30px;
+        border-radius: 15px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .facilities-section h1,
+      .facilities-section h3 {
+        color: #007bff;
+      }
+
+      .facilities-section p {
+        color: #555;
+        line-height: 1.8;
+        margin-bottom: 20px;
+        font-size: 1.1rem;
+      }
+
+      .facilities-section .img-fluid {
+        border-radius: 10px; /* Rounded edges for images */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        margin-bottom: 15px; /* Spacing below images */
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition */
+        width: 100%; /* Increase image width */
+        height: auto; /* Maintain aspect ratio */
+      }
+
+      .facilities-section .img-fluid:hover {
+        transform: scale(1.05); /* Slight zoom on hover */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+      }
+
+      .embed-responsive {
+        margin-top: 20px;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+        .facilities-section {
+          padding: 30px 15px; /* Adjusted padding for smaller screens */
+        }
+
+        .facilities-section h1,
+        .facilities-section h3 {
+          font-size: 1.5rem; /* Adjusted font size for smaller screens */
+        }
+
+        .facilities-section p {
+          font-size: 1rem; /* Adjusted font size for smaller screens */
+        }
+
+        .facilities-section .img-fluid {
+          margin-bottom: 10px; /* Adjusted spacing for smaller screens */
+        }
+
+        .embed-responsive {
+          margin-top: 15px; /* Adjusted margin for smaller screens */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- starting - navbar class="navbar navbar-->
+    <nav class="navbar" style="background-color: #02162b">
+      <div class="container d-flex justify-content-between align-items-center">
+        <img
+          src="../../imgs/ejisuman logo-fotor-bg-remover-2024111252452.png"
+          alt="Ejisuman SHS Logo"
+          class="img-fluid"
+          width="50"
+          height="50"
+        />
+        <a class="logo" href="../../index.html">
+          <h2 class="font-times-new-roman align-text-center fs-4">
+            EJISUMAN SENIOR HIGH SCHOOL
+          </h2>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation"
+          style="color: white"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end text-bg-dark"
+          tabindex="-1"
+          id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+              Account:
+            </h5>
+            <a class="btn btn-primary ml-2" href="../Sign_In.html">Login</a>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../../index.html"
+                  >HOME</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../../Acad_Tab/Academic_Info.html"
+                  >ACADEMIC INFORMATION</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  ADMINISTRATION
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="../Admin_Tab\Teaching_Staff\Teaching_Staff.html"
+                      >TEACHING STAFF</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="../Admin_Tab\Non_Teaching_Staff\Non_Teaching_Staff.html"
+                      >NON-TEACHING STAFF</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../Facilities\Facilities.html"
+                  >FACILITIES</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://ejisumanshs.blogspot.com/"
+                  >BLOG</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  ABOUT
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="../About_Tab\History_Tab.html"
+                      >HISTORY</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="../../About_Tab/Our_Crest.html"
+                      >OUR CREST</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex mt-3" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!--End - Navigation-->
+
+    <!-- Facilities Section -->
+    <div class="facilities-section container mt-5 pt-5">
+      <h1 class="text-center text-primary mb-4">Our Facilities</h1>
+      <p class="text-center mb-4">
+        Ejisuman Senior High School boasts a range of modern facilities designed
+        to support the academic and extracurricular activities of our students.
+      </p>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <h3 class="text-primary">Classrooms</h3>
+          <p>
+            Our classrooms are well-equipped with modern teaching aids and
+            provide a conducive environment for learning. Each classroom is
+            spacious and designed to accommodate a comfortable number of
+            students.
+          </p>
+          <img
+            src="../imgs/277562395_2105614266281390_2540904585725087741_n.jpg"
+            class="img-fluid rounded"
+            alt="Classroom"
+          />
+        </div>
+        <div class="col-md-6 mb-4">
+          <h3 class="text-primary">Administration</h3>
+          <p>
+            The administration block at Ejisuman Senior High School is the hub
+            for the school's operations, housing the principal's office,
+            administrative offices, and staff rooms. It is essential for
+            decision-making, record-keeping, and daily tasks.
+          </p>
+          <img
+            src="../imgs/ADMINISTRATION.jpg"
+            class="img-fluid rounded"
+            alt="Admin-block"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <h3 class="text-primary">ICT Laboratory</h3>
+          <p>
+            Our ICT laboratory is equipped with modern computers and internet
+            access to support digital literacy and technology-based learning.
+            Students have access to various software and online resources to
+            enhance their learning experience.
+          </p>
+          <img
+            src="../imgs/IMG_20171218_131622.jpg"
+            class="img-fluid rounded"
+            alt="ICT Laboratory"
+          />
+        </div>
+        <div class="col-md-6 mb-4">
+          <h3 class="text-primary">Library</h3>
+          <p>
+            The school library offers a wide range of books, journals, and
+            digital resources to support academic research and reading for
+            pleasure. The library provides a quiet and comfortable space for
+            students to study and explore new knowledge.
+          </p>
+          <img
+            src="../imgs/IMG_0692-scaled.webp"
+            class="img-fluid rounded"
+            alt="Library"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <h3 class="text-primary">Dining Hall</h3>
+          <p>
+            The dining hall provides nutritious meals for students and staff. It
+            is a spacious and hygienic facility where students can enjoy their
+            meals in a comfortable setting.
+          </p>
+          <img
+            src="../imgs/Dinning Hall.jpg"
+            class="img-fluid rounded"
+            alt="Dining Hall"
+          />
+        </div>
+        <div class="col-md-6 mb-4">
+          <h3 class="text-primary">Sports Facilities</h3>
+          <p>
+            Our sports facilities include a football field, basketball court,
+            and volleyball court. These facilities support the physical
+            development of our students and provide opportunities for sports and
+            recreational activities.
+          </p>
+          <img
+            src="../imgs/park.webp"
+            class="img-fluid rounded"
+            alt="Sports Facilities"
+          />
+        </div>
+      </div>
+      <div class="row"></div>
+    </div>
+    <!-- End Facilities Section -->
+
+    <!-- AI Assistant Button -->
+    <button
+      id="ai-assistant-btn"
+      class="btn btn-primary"
+      style="position: fixed; bottom: 20px; right: 20px"
+      type="button"
+    >
+      Ask AI
+    </button>
+
+    <!-- AI Assistant Modal -->
+    <div
+      id="ai-assistant-modal"
+      class="modal fade"
+      tabindex="-1"
+      aria-labelledby="aiAssistantModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="aiAssistantModalLabel">AI Assistant</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div id="ai-assistant-chat">
+              <div id="ai-assistant-messages" class="mb-3"></div>
+              <input
+                type="text"
+                id="ai-assistant-input"
+                class="form-control"
+                placeholder="Ask about Ejisuman SHS or Yaa Asantewaa..."
+              />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              id="ai-assistant-send"
+              class="btn btn-primary"
+            >
+              Send
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("ai-assistant-send")
+        .addEventListener("click", function () {
+          var input = document.getElementById("ai-assistant-input");
+          var message = input.value;
+          if (message.trim() !== "") {
+            var messages = document.getElementById("ai-assistant-messages");
+            var userMessage = document.createElement("div");
+            userMessage.classList.add("user-message");
+            userMessage.textContent = message;
+            messages.appendChild(userMessage);
+
+            // Fetch AI response from an online API
+            fetch("https://api.zukijourney.com/v1/chat/completions", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Authorization: "zu-20e0a18dc0ab9259a099246d4f35a78b",
+              },
+              body: JSON.stringify({
+                model: "caramelldansen-1",
+                messages: [{ role: "user", content: message }],
+              }),
+            })
+              .then((response) => response.json())
+              .then((data) => {
+                var aiMessage = document.createElement("div");
+                aiMessage.classList.add("ai-message");
+                aiMessage.textContent = data.answer;
+                messages.appendChild(aiMessage);
+                messages.scrollTop = messages.scrollHeight;
+              })
+              .catch((error) => {
+                var aiMessage = document.createElement("div");
+                aiMessage.classList.add("ai-message");
+                aiMessage.textContent =
+                  "Sorry, there was an error processing your request.";
+                messages.appendChild(aiMessage);
+                messages.scrollTop = messages.scrollHeight;
+              });
+
+            input.value = "";
+          }
+        });
+    </script>
+    <script>
+      const schoolInfo = {
+        name: "Ejisuman Senior High School",
+        location: "Ejisu, Ashanti Region, Ghana",
+        established: "1991",
+
+      function generateAIResponse(message) {
+        if (message.toLowerCase().includes("vision")) {
+          return schoolInfo.vision;
+        } else if (message.toLowerCase().includes("mission")) {
+          return schoolInfo.mission;
+        } else if (message.toLowerCase().includes("contact")) {
+          return `Email: ${schoolInfo.contact.email}, Phone: ${schoolInfo.contact.phone}`;
+        } else if (message.toLowerCase().includes("social media")) {
+          return `Facebook: ${schoolInfo.socialMedia.facebook}, Twitter: ${schoolInfo.socialMedia.twitter}, Instagram: ${schoolInfo.socialMedia.instagram}, TikTok: ${schoolInfo.socialMedia.tiktok}, YouTube: ${schoolInfo.socialMedia.youtube}`;
+        } else {
+          return "Sorry, I don't have information on that topic.";
+        }
+      }
+    </script>
+
+    <!-- Starting - Footer -->
+    <footer class="text-white py-4" style="background-color: #02162b">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h3>Important Deadlines:</h3>
+            <marquee behavior="scroll" direction="left"
+              >WASSCE Registration Ends On: 20th December, 2024</marquee
+            >
+          </div>
+          <div class="col-md-4">
+            <h3>Contact Us:</h3>
+            <p>Email: info@ejisumanshs.edu.gh</p>
+            <a
+              class
+              name="btn btn-primary ml-3"
+              href="https://web.whatsapp.com/"
+              target="_blank"
+              >Phone: <i class="bi bi-whatsapp"></i>+233 244 027477
+            </a>
+          </div>
+          <div class="col-md-4 text-center">
+            <h3>Follow Us:</h3>
+            <a
+              href="https://web.facebook.com/share/g/SRP7cWYxLdkyDKAp/"
+              class="text-white me-3"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="https://x.com/ejisumanshs" class="text-white me-3"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/ejisumanseniorhighschool?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              class="text-white me-3"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.tiktok.com/@ejisumanshs"
+              class="text-white me-3"
+              ><i class="fab fa-tiktok"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/channel/UCejisumanshs"
+              class="text-white"
+              ><i class="fab fa-youtube"></i
+            ></a>
+          </div>
+        </div>
+        <hr />
+        <div class="text-center">
+          <p>&copy; 2024 Ejisuman Senior High School. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!--Ending - Footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const assistantBtn = document.getElementById("ai-assistant-btn");
+        const assistantModal = new bootstrap.Modal(
+          document.getElementById("ai-assistant-modal")
+        );
+        const assistantInput = document.getElementById("ai-assistant-input");
+        const assistantSend = document.getElementById("ai-assistant-send");
+        const assistantMessages = document.getElementById(
+          "ai-assistant-messages"
+        );
+
+        // Show the modal when the assistant button is clicked
+        assistantBtn.addEventListener("click", function () {
+          assistantModal.show();
+        });
+
+        // Send message when the send button is clicked
+        assistantSend.addEventListener("click", function () {
+          sendMessage();
+        });
+
+        // Send message when Enter key is pressed
+        assistantInput.addEventListener("keypress", function (event) {
+          if (event.key === "Enter") {
+            event.preventDefault();
+            sendMessage();
+          }
+        });
+
+        async function sendMessage() {
+          const message = assistantInput.value.trim();
+          if (message !== "") {
+            const userMessage = document.createElement("div");
+            userMessage.classList.add("user-message");
+            userMessage.textContent = message;
+            assistantMessages.appendChild(userMessage);
+
+            // Scroll to bottom
+            assistantMessages.scrollTop = assistantMessages.scrollHeight;
+
+            // OpenAI API configuration
+            const apiConfig = {
+              model: "gpt-4o-mini",
+              messages: [{ role: "user", content: message }],
+              response_format: {
+                type: "text",
+              },
+              temperature: 1,
+              max_completion_tokens: 2048,
+              top_p: 1,
+              frequency_penalty: 0,
+              presence_penalty: 0,
+            };
+
+            // Call OpenAI API
+            try {
+              const aiResponse = await fetch(
+                "https://api.openai.com/v1/completions",
+                {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer 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`,
+                  },
+                  body: JSON.stringify(apiConfig),
+                }
+              );
+
+              const data = await aiResponse.json();
+              const aiText = data.choices[0].text.trim();
+
+              const aiMessage = document.createElement("div");
+              aiMessage.classList.add("ai-message");
+              aiMessage.textContent = aiText;
+              assistantMessages.appendChild(aiMessage);
+            } catch (error) {
+              const aiMessage = document.createElement("div");
+              aiMessage.classList.add("ai-message");
+              aiMessage.textContent = "Error: Unable to fetch AI response.";
+              assistantMessages.appendChild(aiMessage);
+            }
+
+            assistantInput.value = "";
+            assistantMessages.scrollTop = assistantMessages.scrollHeight;
+          }
+        }
+      });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+    <script type="text/javascript" src="cssanimation-gsap.js"></script>
+  </body>
+</html>

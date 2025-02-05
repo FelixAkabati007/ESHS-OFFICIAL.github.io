@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Ejisuman Senior High School</title>
+    <link rel="icon" type="image/x-icon" href="../imgs/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../script.js"></script>
+    <link rel="stylesheet" href="../ai-assistant.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        new SchoolAIAssistant();
+      });
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <style>
+      /* Contact Us Section Styles */
+/* Contact Us Section Styles */
+.contact-us-section {
+  background-color: #ffffff; /* White background for a clean look */
+  padding: 60px 30px; /* Increased padding for a more spacious feel */
+  border-radius: 15px; /* Slightly larger border radius for modern curves */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow for a luxury feel */
+  font-family: 'Lora', serif; /* Luxury serif font */
+}
+
+.contact-title {
+  font-size: 2rem; /* Slightly larger font size for prominence */
+  color: #007bff; /* Luxurious blue color */
+  margin-bottom: 20px; /* Increased margin for better spacing */
+  text-transform: uppercase;
+  border-bottom: 3px solid #007bff; /* Thicker border for emphasis */
+  padding-bottom: 10px;
+  transition: color 0.3s ease-in-out, border-bottom-color 0.3s ease-in-out; /* Smooth transition */
+}
+
+.contact-title:hover {
+  color: #0056b3; /* Darker shade on hover */
+  border-bottom-color: #0056b3; /* Matching border color on hover */
+}
+
+.contact-description {
+  color: #555; /* Softer text color */
+  line-height: 1.8; /* Increased line height for readability */
+  margin-bottom: 25px;
+  font-size: 1.1rem; /* Slightly larger text for modern look */
+}
+
+.map-container {
+  width: 100%;
+  height: 350px; /* Slightly larger map height */
+  border-radius: 15px; /* Matching border radius with section */
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.map-container:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* More depth on hover */
+  transform: translateY(-5px); /* Slight lift on hover */
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: #007bff; /* Brand color for consistency */
+  border: none; /* Clean button design */
+  padding: 12px 24px; /* Spacious padding for modern look */
+  border-radius: 30px; /* Rounded edges for sleek look */
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  transform: translateY(-3px); /* Slight lift on hover */
+}
+
+/* Form Styles */
+.form-control {
+  border: 2px solid #007bff; /* Stylish border */
+  border-radius: 10px; /* Rounded edges for modern feel */
+  padding: 10px; /* Spacious padding */
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition */
+}
+
+.form-control:focus {
+  border-color: #0056b3; /* Darker border color on focus */
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.2); /* Glow effect on focus */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .contact-us-section {
+    padding: 30px 15px; /* Adjusted padding for smaller screens */
+  }
+
+  .contact-title {
+    font-size: 1.7rem; /* Adjusted font size for smaller screens */
+  }
+
+  .map-container {
+    height: 250px; /* Adjusted map height for smaller screens */
+  }
+
+  .btn-primary {
+    padding: 10px 20px; /* Adjusted button padding for smaller screens */
+    font-size: 0.9rem; /* Adjusted font size for smaller screens */
+  }
+}
+
+    </style>
+    <style>
+      /* Advanced CSS with animations, custom properties, and modern layout techniques */
+      :root {
+        --primary: #02162b;
+        --secondary: #ffd700;
+        --text: #000000;
+        --background: #f4f4f4;
+        --white: #ffffff;
+        --transition: 0.3s ease;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: var(--text);
+        background-color: var(--background);
+        overflow-x: hidden;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Advanced header styles with glassmorphism effect */
+      header {
+        background-color: rgba(2, 22, 43, 0.8);
+        backdrop-filter: blur(10px);
+        color: var(--white);
+        padding: 20px 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        transition: all var(--transition);
+      }
+
+      header.scrolled {
+        padding: 10px 0;
+        background-color: rgba(2, 22, 43, 0.95);
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+      }
+
+      .nav-links li {
+        margin-left: 30px;
+      }
+
+      .nav-links a {
+        color: var(--white);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color var(--transition);
+        position: relative;
+      }
+
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        background-color: var(--secondary);
+        transition: width var(--transition);
+      }
+
+      .nav-links a:hover::after {
+        width: 100%;
+      }
+
+      /* Hero section with parallax effect */
+      .hero {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: var(--white);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("https://example.com/school-hero.jpg");
+        background-size: cover;
+        background-position: center;
+        transform: scale(1.1);
+        transition: transform 0.5s ease;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 800px;
+      }
+
+      .hero h1 {
+        font-size: 4rem;
+        margin-bottom: 20px;
+        opacity: 0;
+        transform: translateY(50px);
+        animation: fadeInUp 1s ease forwards 0.5s;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        opacity: 0;
+        transform: translateY(50px);
+        animation: fadeInUp 1s ease forwards 0.7s;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background-color: var(--secondary);
+        color: var(--primary);
+        padding: 12px 30px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all var(--transition);
+        opacity: 0;
+        transform: translateY(50px);
+        animation: fadeInUp 1s ease forwards 0.9s;
+      }
+
+      .cta-button:hover {
+        background-color: var(--white);
+        color: var(--primary);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Section styles with advanced animations */
+      section {
+        padding: 100px 0;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+      }
+
+      section.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      section h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 50px;
+        color: var(--primary);
+        position: relative;
+      }
+
+      section h2::after {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 3px;
+        background-color: var(--secondary);
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      
+
+      /* History section with image hover effect */
+      .history {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .history-image {
+        flex: 1;
+        min-width: 0px;
+        max-width: 400px;
+        margin-right: 40px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 10px 20px  rgba(116, 126, 235, 0.644);;
+      }
+
+      .history-image img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.5s ease;
+      }
+
+      .history-image:hover img {
+        transform: scale(1.1);
+      }
+
+      .history-content {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      /* Vision & Mission styles with card flip effect */
+      .vision-mission {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 40px;
+        margin-top: 4%;
+  margin-bottom: 4%;
+  padding: 3%;
+  color: var(--white);
+      }
+      .vision-mission h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 50px;
+        color: var (--primary);
+        position: relative;
+        margin-top: 5%;
+        color: yellow;
+      }
+
+      .vision,
+      .mission {
+        flex: 1;
+        min-width: 300px;
+        height: 300px;
+        perspective: 1000px;
+      }
+
+      .card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        
+      }
+
+      .vision:hover .card-inner,
+      .mission:hover .card-inner {
+        transform: rotateY(180deg);
+        color: #ffffff;
+      }
+
+      .card-front,
+      .card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(116, 126, 235, 0.644);
+      }
+
+      .card-front {
+        background-color:  #02162b;;
+      }
+
+      .card-back {
+        background-color: var(--primary);
+        color: rgb(255, 255, 255);
+        transform: rotateY(180deg);
+      }
+
+      .vision h3,
+      .mission h3 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        color: yellow;
+      }
+
+      .card-back h3 {
+        color: white;
+      }
+
+      /* Core Values styles with hover effect */
+.core-values {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 30px;
+}
+
+.value {
+  background-color: var(--white);
+  padding: 2px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(116, 126, 235, 0.644);
+  transition: all var(--transition);
+  text-align: center;
+}
+
+.value:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.value h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: var(--primary);
+}
+
+.value-icon {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.value-icon img {
+  width: 100px; /* Adjust size as needed */
+  height: 100px; /* Adjust size as needed */
+  object-fit: cover; /* Ensure image fits within dimensions */
+}
+
+/* Achievements styles with counter animation */
+.achievements {
+  background-color: var(--primary);
+  color: var(--white);
+  margin-top: 10%;
+  margin-bottom: 10%;
+  padding: 3%;
+  box-shadow: 0 4px 10px rgba(116, 126, 235, 0.438);
+}
+
+.achievements h2 {
+  color: var(--white);
+}
+
+
+.achievement-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 30px;
+  text-align: center;
+}
+
+.achievement {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 10px;
+  transition: transform var(--transition);
+}
+
+.achievement:hover {
+  transform: translateY(-10px);
+}
+
+.achievement h3 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: var (--secondary);
+}
+<=====footer====>
+      /* Footer styles */
+      footer {
+        background-color: var(--primary);
+        color: var(--white);
+        padding: 60px 0 30px;
+      }
+
+      .footer-content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 40px;
+      }
+
+      .footer-section {
+        flex: 1;
+        min-width: 200px;
+      }
+
+      .footer-section h3 {
+        margin-bottom: 20px;
+        color: var(--secondary);
+      }
+
+      .footer-section ul {
+        list-style: none;
+      }
+
+      .footer-section ul li {
+        margin-bottom: 10px;
+      }
+
+      .footer-section ul li a {
+        color: var(--white);
+        text-decoration: none;
+        transition: color var(--transition);
+      }
+
+      .footer-section ul li a:hover {
+        color: var(--secondary);
+      }
+
+      .social-links a {
+        color: var(--white);
+        margin-right: 15px;
+        font-size: 1.2rem;
+        transition: color var(--transition);
+      }
+
+      .social-links a:hover {
+        color: var(--secondary);
+      }
+
+      .footer-bottom {
+        text-align: center;
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      /* Animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Responsive styles */
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .hero p {
+          font-size: 1rem;
+        }
+
+        section h2 {
+          font-size: 2rem;
+        }
+
+        .history {
+          flex-direction: column;
+        }
+
+        .history-image {
+          margin-right: 0;
+          margin-bottom: 30px;
+        }
+        .history-section {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .history-image img {
+          width: 100%;
+          max-width: 400px; /* Adjust this value as needed */
+          border-radius: 10px;
+        }
+
+        .history-content {
+          flex: 1;
+          margin-left: 20px;
+        }
+
+
+        .vision,
+        .mission {
+          height: auto;
+        }
+
+        .card-inner {
+          transform-style: flat;
+        }
+
+        .vision:hover .card-inner,
+        .mission:hover .card-inner {
+          transform: none;
+          
+        }
+
+        .card-back {
+          display: none;
+        }
+      }
+      .About-Content h1 {padding-top: 4%; padding-bottom: 2%;};
+      .vision-mission{
+        padding-top: 70%; 
+        padding-bottom: 7%;
+      margin-top: 60%;}
+      .teachers{
+        padding-top: 7%; 
+        padding-bottom: 7%;}
+      /* Achievements Section Styles */ .achievements-section { background-color:  #02162b;; padding: 40px 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); } .achievement-card { background-color: #ffffff; border: 1px solid #ddd; border-radius: 10px; transition: transform 0.3s, box-shadow 0.3s; } .achievement-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); } .achievement-title { font-size: 1.5rem; color: #007bff; margin-bottom: 10px; } .achievement-description { color: #333; } /* Responsive Adjustments */ @media (max-width: 768px) { .achievements-section { padding: 20px 10px; } .achievement-title { font-size: 1.2rem; } .achievement-card { margin-bottom: 20px; } }
+    /* About Us Section Styles */
+.about-us-section {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-title {
+  font-size: 1.8rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.about-description {
+  color: #333;
+  line-height: 1.6;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .about-us-section {
+    padding: 20px 10px;
+  }
+
+  .about-title {
+    font-size: 1.5rem;
+  }
+
+  .about-description {
+    font-size: 1rem;
+  }
+
+  .img-fluid {
+    margin-bottom: 20px;
+  }
+}
+    </style>
+    <style>
+      /* Contact Buttons Styles */
+.contact-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0; /* Adjust margin as needed */
+}
+
+/* Ensure buttons have consistent styles */
+.contact-buttons .btn-primary {
+  background-color: #007bff; /* Brand color for consistency */
+  border: none; /* Clean button design */
+  padding: 12px 24px; /* Spacious padding for modern look */
+  border-radius: 50px; /* Rounded edges for pill shape */
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Hover effects for buttons */
+.contact-buttons .btn-primary:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  transform: translateY(-3px); /* Slight lift on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .contact-buttons {
+    flex-direction: column; /* Stack buttons vertically on small screens */
+    align-items: flex-start; /* Align items to start */
+  }
+
+  .contact-buttons .btn-primary {
+    margin-bottom: 10px; /* Add spacing between buttons */
+    width: 100%; /* Full width buttons */
+  }
+
+  .contact-buttons .btn-primary:last-child {
+    margin-bottom: 0; /* Remove margin for last button */
+  }
+}
+    </style>
+    <style>
+      /* Add custom styles here */
+    </style>
+  </head>
+  <body>
+   <!-- starting - navbar class="navbar navbar-->
+   <nav class="navbar" style="background-color: #02162b">
+    <div class="container d-flex justify-content-between align-items-center">
+      <img
+        src="../../imgs/ejisuman logo-fotor-bg-remover-2024111252452.png"
+        alt="Ejisuman SHS Logo"
+        class="img-fluid"
+        width="50"
+        height="50"
+      />
+      <a class="logo" href="../../index.html">
+        <h2 class="font-times-new-roman align-text-center fs-4">
+          EJISUMAN SENIOR HIGH SCHOOL
+        </h2>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasDarkNavbar"
+        aria-controls="offcanvasDarkNavbar"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="offcanvas offcanvas-end text-bg-dark"
+        tabindex="-1"
+        id="offcanvasDarkNavbar"
+        aria-labelledby="offcanvasDarkNavbarLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+            Account:
+          </h5>
+          <a
+            class="btn btn-primary ml-2"
+            href="../../Admin_Dashboard/Admin_Dashboard.html"
+            >Login</a
+          >
+          <button
+            type="button"
+            class="btn-close btn-close-white"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../../index.html"
+                >HOME</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../Acad_Tab/Academic_Info.html"
+                >ACADEMIC INFORMATION</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                ADMINISTRATION
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../Admin_Tab/Teaching_Staff/Teaching_Staff.html"
+                    >TEACHING STAFF</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="../Admin_Tab/Non_Teaching_Staff/Non_Teaching_Staff.html"
+                    >NON-TEACHING STAFF</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../Facilities/Facilities.html"
+                >FACILITIES</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://ejisumanshs.blogspot.com/"
+                >BLOG</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link dropdown-toggle"
+                href="../About_Tab/History_Tab.html"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                ABOUT
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li>
+                  <a class="dropdown-item" href="../About_Tab/History_Tab.html"
+                    >HISTORY</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../About_Tab/Our_Crest.html">OUR CREST</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex mt-3" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--End - Navigation-->
+
+ <!-- About Us Section -->
+<section id="about-us" class="about-us-section container my-5">
+  <h2 class="text-center text-primary mb-4">About Us</h2>
+  <div class="row align-items-center">
+    <div class="col-md-6 mb-4">
+      <iframe
+                      width="100%"
+                      height="200px"
+                      src="https://www.youtube.com/embed/ue4I7D7rCtQ?si=SOBVFwbve0Cwch3O"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                    ></iframe>
+                    <h4>Virtual Tour</h4>
+                    <p>
+                      Take a virtual tour of our campus to explore our facilities and get a feel for the learning environment at Ejisuman Senior High School.
+                    </p>
+    </div>
+    <div class="col-md-6 mb-4">
+      <p class="about-description">
+        Ejisuman Senior High School's journey to becoming a respected institution in Ghana began with its establishment in 1970. Originally founded with a mission to provide quality education to the youth of the Ashanti Region, the school has steadily grown in reputation and size over the years.
+      </p>
+      <p class="about-description">
+        The school continues to evolve and adapt, embracing modern teaching methods and technology to ensure students receive the best education possible. The school's success stories are a testament to its unwavering commitment to developing well-rounded individuals who go on to make significant contributions to society, both locally and internationally.
+      </p>
+    </div>
+  </div>
+  </div>
+</section>
+<!-- End - About Us Section -->
+
+<!-- Starting Vision & Mission Section -->
+<section id="vision-mission" class="container">
+  <h2>Vision & Mission</h2>
+  <div class="vision-mission">
+    <div class="vision">
+      <div class="card-inner">
+        <div class="card-front">
+          <h3>Our Vision</h3>
+          <p>To be a leading institution in holistic education</p>
+        </div>
+        <div class="card-back">
+          <h3>Our Vision</h3>
+          <p>
+            To prepare learners for holistic development, equipping them
+            with the knowledge, skills, and values needed to excel in
+            their future endeavors and contribute positively to society.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="mission">
+      <div class="card-inner">
+        <div class="card-front">
+          <h3>Our Mission</h3>
+          <p>Providing quality education for excellence</p>
+        </div>
+        <div class="card-back">
+          <h3>Our Mission</h3>
+          <p>
+            To provide quality education for excellence, social, and moral
+            development. We aim to create a nurturing environment that
+            fosters intellectual growth, character building, and community
+            engagement.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Ending Vision & Mission Section -->
+
+
+<!-- Starting Academic Excellence Section -->
+<section id="teachers" class="container">
+    <h2 class="mt-4">Academic Excellence</h2>
+    <p>
+      Ejisuman Senior High School is known for its commitment to academic
+      excellence. Our students consistently perform well in the West African
+      Senior School Certificate Examination (WASSCE) and other national
+      competitions. We pride ourselves on our holistic approach to education,
+      focusing not only on academic achievement but also on character
+      development and extracurricular activities.
+    </p>
+</section>
+<!-- Ending Academic Excellence Section -->
+
+<!-- Starting Core Values Section -->
+<section id="values" class="container">
+  <h2>Core Values</h2>
+  <div class="core-values">
+    <div class="value">
+      <div class="value-icon">
+        <img src="..\imgs\pngegg.png" alt="Excellence Icon">
+      </div>
+      <h3>Excellence</h3>
+      <p>Striving for the highest standards in all our endeavors</p>
+    </div>
+    <div class="value">
+      <div class="value-icon">
+        <img src="..\imgs\pngegg (1).png" alt="Integrity Icon">
+      </div>
+      <h3>Sincerity</h3>
+      <p>Upholding honesty, ethics, and transparency in all actions</p>
+    </div>
+    <div class="value">
+      <div class="value-icon">
+        <img src="..\imgs\classroom-icon.png" alt="Innovation Icon">
+      </div>
+      <h3>Efficiency</h3>
+      <p>Embracing creativity and forward-thinking approaches</p>
+    </div>
+    <div class="value">
+      <div class="value-icon">
+        <img src="..\imgs\collaboration-cooperation-clip-art-community-c6056ee8645dcef9c25f551530a3645a.png" alt="Inclusivity Icon">
+      </div>
+      <h3>Collaboration</h3>
+      <p>Fostering a diverse and welcoming community for all</p>
+    </div>
+  </div>
+</section>
+<!-- Ending Core Values Section -->
+
+<!-- Achievements Section --> 
+ <section id="achievements" class="achievements-section container my-5"> 
+  <h2 class="text-center text-primary mb-4">Our Achievements</h2> 
+  <div class="row"> 
+    <div class="col-md-6 mb-4"> 
+      <div class="achievement-card p-4"> 
+        <h3 class="achievement-title">1st Place - Regional Science Quiz</h3> 
+        <p class="achievement-description">Our science team clinched the top spot, showcasing their profound knowledge and critical thinking skills.</p> 
+      </div> 
+    </div> 
+    <div class="col-md-6 mb-4"> 
+      <div class="achievement-card p-4"> 
+        <h3 class="achievement-title">2nd Place - National Debate Championship</h3> 
+        <p class="achievement-description">The debate team earned second place, reflecting our emphasis on developing well-rounded communicators.</p> 
+      </div> 
+    </div> 
+    <div class="col-md-6 mb-4"> 
+      <div class="achievement-card p-4"> 
+        <h3 class="achievement-title">Best School Garden Award</h3> 
+        <p class="achievement-description">Our commitment to environmental sustainability was recognized with the Best School Garden Award.</p> 
+      </div> 
+    </div> 
+    <div class="col-md-6 mb-4"> 
+      <div class="achievement-card p-4"> 
+        <h3 class="achievement-title">Outstanding Performance in WASSCE</h3> 
+        <p class="achievement-description">Year after year, our students deliver stellar performances in the WASSCE.</p> 
+      </div> 
+    </div> 
+  </div> 
+</section> 
+<!-- Modal Structure --> 
+ <div class="modal fade" id="achievementModal" tabindex="-1" aria-labelledby="achievementModalLabel" aria-hidden="true"> 
+  <div class="modal-dialog modal-dialog-centered"> 
+    <div class="modal-content"> 
+      <div class="modal-header"> 
+        <h5 class="modal-title" id="achievementModalLabel">Achievement Details</h5> 
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> 
+      </div> 
+      <div class="modal-body"> 
+        <!-- Dynamic Content Goes Here --> 
+        </div> 
+      </div> 
+    </div> 
+  </div>
+
+<!-- Contact Information Content -->
+  <div class="section container my-5">
+    <h1 class="text-center text-primary mb-4">Contact Information</h1>
+    <p class="text-center mb-4">
+      We are here to assist you. Please find our contact information below.
+    </p>
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="achievement-card p-4">
+          <h3 class="text-primary">Address</h3>
+          <p>
+            Ejisuman Senior High School<br />
+            P.O. Box 123, Ejisu<br />
+            Ashanti Region, Ghana
+          </p>
+          <img
+            src="../imgs/address-icon.png"
+            class="img-fluid rounded"
+            alt="School Address"
+          />
+        </div>
+      </div>
+      <div class="col-md-6 mb-4">
+        <div class="achievement-card p-4">
+          <h3 class="text-primary">Phone</h3>
+          <p>
+            Main Office: +233 244 027477<br />
+            Admissions: +233 244 027478
+          </p>
+          <img
+            src="../imgs/mobile-icon.png"
+            class="img-fluid rounded"
+            alt="School Phone"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="achievement-card p-4">
+          <h3 class="text-primary">Email</h3>
+          <p>
+            General Inquiries: info@ejisumanshs.edu.gh<br />
+            Admissions: admissions@ejisumanshs.edu.gh
+          </p>
+          <img
+            src="../imgs/gmail-icon.png"
+            class="img-fluid rounded"
+            alt="School Email"
+          />
+        </div>
+      </div>
+      <div class="col-md-6 mb-4">
+        <div class="achievement-card p-4">
+          <h3 class="text-primary">Social Media</h3>
+          <p>Follow us on social media for the latest updates and news:</p>
+          <a
+            href="https://web.facebook.com/share/g/SRP7cWYxLdkyDKAp/"
+            class="text-primary me-3"
+            ><i class="fab fa-facebook-f"></i> Facebook</a
+          >
+          <a href="https://x.com/ejisumanshs" class="text-primary me-3"
+            ><i class="fab fa-twitter"></i> Twitter</a
+          >
+          <a
+            href="https://www.instagram.com/ejisumanseniorhighschool?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            class="text-primary me-3"
+            ><i class="fab fa-instagram"></i> Instagram</a
+          >
+          <a
+            href="https://www.tiktok.com/@ejisumanshs"
+            class="text-primary me-3"
+            ><i class="fab fa-tiktok"></i> TikTok</a
+          >
+          <a
+            href="https://www.youtube.com/channel/UC1234567890"
+            class="text-primary"
+            ><i class="fab fa-youtube"></i> YouTube</a
+          >
+          <img
+            src="../imgs/social-media-marketing-icon.png"
+            class="img-fluid rounded mt-3"
+            alt="School Social Media"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 mb-4">
+        <h3 class="text-primary">Location Map</h3>
+        <p>Find us on the map below:</p>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8368.554017651775!2d-1.4702560391689177!3d6.731072536828654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdbea6652c48b45%3A0xef532bee56280a4b!2sEjisuman%20Senior%20High%20School!5e0!3m2!1sen!2sgh!4v1737230102102!5m2!1sen!2sgh"
+          width="100%"
+          height="450"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+  <script>
+    function initMap() {
+      var schoolLocation = { lat: 6.715, lng: -1.548 };
+      var map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 15,
+        center: schoolLocation,
+      });
+      var marker = new google.maps.Marker({
+        position: schoolLocation,
+        map: map,
+      });
+    }
+  </script>
+  <script
+    async
+    defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+  ></script>  
+  <div class="container"> 
+    <div class="col-md-6 mb-4"> 
+      <h3 class="contact-title">Contact Form</h3> 
+      <form id="contact-form" class="p-4 border rounded shadow"> 
+        <div class="mb-3"> 
+          <label for="name" class="form-label">Name</label> 
+          <input type="text" class="form-control" id="name" placeholder="Enter your name" required> 
+        </div> 
+        <div class="mb-3"> 
+          <label for="email" class="form-label">Email</label> 
+          <input type="email" class="form-control" id="email" placeholder="Enter your email" required> 
+        </div> 
+        <div class="mb-3"> 
+          <label for="message" class="form-label">Message</label> 
+          <textarea class="form-control" id="message" rows="3" placeholder="Your message" required></textarea> 
+        </div> 
+        <button type="submit" class="btn btn-primary">Submit</button> 
+      </form> 
+    </div> 
+  </div> 
+</div>
+  
+  <!-- AI Assistant Button -->
+  <button
+  id="ai-assistant-btn"
+  class="btn btn-primary"
+  style="position: fixed; bottom: 20px; right: 20px"
+>
+  Ask AI
+</button>
+
+<!-- AI Assistant Modal -->
+<div
+  id="ai-assistant-modal"
+  class="modal fade"
+  tabindex="-1"
+  aria-labelledby="aiAssistantModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="aiAssistantModalLabel">AI Assistant</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div id="ai-assistant-chat">
+          <div
+            id="ai-assistant-messages"
+            class="mb-3"
+            style="max-height: 300px; overflow-y: auto"
+          ></div>
+          <input
+            type="text"
+            id="ai-assistant-input"
+            class="form-control"
+            placeholder="Ask about Ejisuman SHS or Yaa Asantewaa..."
+          />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          id="ai-assistant-send"
+          class="btn btn-primary"
+        >
+          Send
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Quick Links Section -->
+    <section id="quick-links" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Quick Links</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div class="col">
+            <a href="../Admin_Tab/Teaching_Staff/Teaching_Staff.html" class="btn btn-outline-primary w-100">
+              Teaching Staff
+            </a>
+          </div>
+          <div class="col">
+            <a href="../Admin_Tab/Non_Teaching_Staff/Non_Teaching_Staff.html" class="btn btn-outline-primary w-100">
+              Non-Teaching Staff
+            </a>
+          </div>
+          <div class="col">
+            <a href="../History/History_Tab.html" class="btn btn-outline-primary w-100">
+              History
+            </a>
+          </div>
+          <div class="col">
+            <a href="../Facilities/Facilities.html" class="btn btn-outline-primary w-100">
+              Facilities
+            </a>
+          </div>
+          <div class="col">
+            <a href="../../Acad_Tab/Academic_Info.html" class="btn btn-outline-primary w-100">
+              Academic Information
+            </a>
+          </div>
+          <div class="col">
+            <a href="https://ejisumanshs.blogspot.com/" class="btn btn-outline-primary w-100">
+              Blog
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Ending - Quick Links -->
+  
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4" style="background-color: #02162b;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h3>Important Deadlines:</h3>
+            <marquee behavior="scroll" direction="left"
+              >WASSCE Registration Ends On: 20th December, 2024</marquee
+            >
+          </div>
+          <div class="col-md-4">
+            <h3>Contact Us:</h3>
+            <p>Email: info@ejisumanshs.edu.gh</p>
+            <a
+              class="btn btn-primary"
+              href="https://web.whatsapp.com/"
+              target="_blank"
+            >
+              <i class="fab fa-whatsapp"></i> +233 244 027477
+            </a>
+          </div>
+          <div class="col-md-4">
+            <h3>Follow Us:</h3>
+            <div class="social-icons d-flex justify-content-center"></div>
+              <a
+                href="https://web.facebook.com/share/g/SRP7cWYxLdkyDKAp/"
+                class="text-white me-3"
+                target="_blank"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://x.com/ejisumanshs"
+                class="text-white me-3"
+                target="_blank"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/ejisumanseniorhighschool"
+                class="text-white me-3"
+                target="_blank"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://www.tiktok.com/@ejisumanshs"
+                class="text-white me-3"
+                target="_blank"
+              >
+                <i class="fab fa-tiktok"></i>
+              </a>
+              <a
+                href="https://www.youtube.com/channel/ejisumanshs"
+                class="text-white"
+                target="_blank"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="text-center">
+          <p>&copy; 2024 Ejisuman Senior High School. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!--End - Footer -->
+
+    <!-- Add this CSS for better responsiveness -->
+    <style>
+      @media (max-width: 768px) {
+        .navbar-brand {
+          font-size: 1.2rem;
+        }
+
+        .carousel-caption {
+          padding: 10px;
+        }
+
+        .carousel-caption h5 {
+          font-size: 1rem;
+        }
+
+        .carousel-caption p {
+          font-size: 0.875rem;
+        }
+
+        .social-icons {
+          margin-top: 1rem;
+        }
+
+        footer h3 {
+          font-size: 1.25rem;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .navbar-brand {
+          font-size: 1rem;
+        }
+
+        .carousel-caption {
+          padding: 5px;
+        }
+
+        .carousel-caption h5 {
+          font-size: 0.875rem;
+        }
+
+        .carousel-caption p {
+          font-size: 0.75rem;
+        }
+
+        footer {
+          text-align: center;
+        }
+
+        .social-icons {
+          justify-content: center;
+        }
+      }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document
+        .getElementById("ai-assistant-btn")
+        .addEventListener("click", function () {
+          var modal = new bootstrap.Modal(
+            document.getElementById("ai-assistant-modal")
+          );
+          modal.show();
+        });
+
+      document
+        .getElementById("ai-assistant-send")
+        .addEventListener("click", function () {
+          var input = document.getElementById("ai-assistant-input");
+          var message = input.value;
+          if (message.trim() !== "") {
+            var messages = document.getElementById("ai-assistant-messages");
+            var userMessage = document.createElement("div");
+            userMessage.classList.add("user-message");
+            userMessage.textContent = message;
+            messages.appendChild(userMessage);
+
+            // Simulate AI response
+            var aiMessage = document.createElement("div");
+            aiMessage.classList.add("ai-message");
+            aiMessage.textContent =
+              "This is a simulated response based on the question: " + message;
+            messages.appendChild(aiMessage);
+
+            input.value = "";
+            messages.scrollTop = messages.scrollHeight;
+          }
+        });
+    </script>
+       <script>
+        // Navbar scroll effect
+        window.addEventListener("scroll", function () {
+          const header = document.querySelector("header");
+          header.classList.toggle("scrolled", window.scrollY > 0);
+        });
+  
+        // Parallax effect for hero section
+        window.addEventListener("scroll", function () {
+          const heroImg = document.querySelector(".hero-bg");
+          heroImg.style.transform = `scale(1.1) translateY(${
+            window.scrollY * 0.5
+          }px)`;
+        });
+  
+        // Intersection Observer for section animations
+        const sections = document.querySelectorAll("section");
+        const observerOptions = {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.1,
+        };
+  
+        const sectionObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+  
+        sections.forEach((section) => {
+          sectionObserver.observe(section);
+        });
+  
+        // Counter animation for achievements
+        const counters = document.querySelectorAll(".counter");
+        const speed = 200;
+  
+        const counterObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const counter = entry.target;
+              const target = +counter.dataset.target;
+              const count = +counter.innerText;
+              const increment = target / speed;
+  
+              if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(() => counterObserver.observe(counter), 1);
+              } else {
+                counter.innerText = target;
+              }
+            }
+          });
+        }, observerOptions);
+  
+        counters.forEach((counter) => {
+          counterObserver.observe(counter);
+        });
+  
+        // Testimonial slider
+        const testimonialContainer = document.querySelector(
+          ".testimonial-container"
+        );
+        const testimonials = document.querySelectorAll(".testimonial");
+        const prevButton = document.getElementById("prevTestimonial");
+        const nextButton = document.getElementById("nextTestimonial");
+        let currentIndex = 0;
+  
+        function showTestimonial(index) {
+          testimonials.forEach((testimonial, i) => {
+            testimonial.classList.toggle("active", i === index);
+          });
+          testimonialContainer.style.transform = `translateX(-${index * 100}%)`;
+        }
+  
+        prevButton.addEventListener("click", () => {
+          currentIndex =
+            (currentIndex - 1 + testimonials.length) % testimonials.length;
+          showTestimonial(currentIndex);
+        });
+  
+        nextButton.addEventListener("click", () => {
+          currentIndex = (currentIndex + 1) % testimonials.length;
+          showTestimonial(currentIndex);
+        });
+  
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute("href")).scrollIntoView({
+              behavior: "smooth",
+            });
+          });
+        });
+      </script>
+      <script>document.querySelectorAll('.about-description').forEach(para => { para.addEventListener('click', () => { const title = 'More About Us'; const content = ` Ejisuman Senior High School has always been at the forefront of educational excellence. Our dedicated staff and teachers work tirelessly to provide the best learning environment for our students. We believe in the holistic development of our students, ensuring they are not only academically proficient but also morally and socially responsible individuals. Our vision and mission statements guide our daily activities and long-term plans, ensuring we stay true to our founding principles while adapting to the changing educational landscape. Join us in our journey towards excellence and be a part of the Ejisuman Senior High School family. `; const modalTitle = document.getElementById('aboutModalLabel'); const modalBody = document.querySelector('#aboutModal .modal-body'); modalTitle.textContent = title; modalBody.innerHTML = content; const aboutModal = new bootstrap.Modal(document.getElementById('aboutModal')); aboutModal.show(); }); }); </script>
+  </body>
+</html>

@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Non-Teaching Staff - Ejisuman Senior High School</title>
+    <link rel="icon" type="image/x-icon" href="../../imgs/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../../script.js"></script>
+    <link rel="stylesheet" href="../../ai-assistant.css" />
+    <script src="../../js/ai-assistant.js"></script>
+    <style>
+      /* Add custom styles here */
+      .form-control {
+        border: 2px solid #007bff; /* Stylish border */
+        border-radius: 10px; /* Rounded edges for modern feel */
+        padding: 10px; /* Spacious padding */
+        transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition */
+      }
+
+      .form-control:focus {
+        border-color: #0056b3; /* Darker border color on focus */
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.2); /* Glow effect on focus */
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        new SchoolAIAssistant();
+      });
+    </script>
+  </head>
+  <body>
+    <!-- starting - navbar class="navbar navbar-->
+    <nav class="navbar" style="background-color: #02162b">
+      <div class="container d-flex justify-content-between align-items-center">
+        <img
+          src="../../imgs/ejisuman logo-fotor-bg-remover-2024111252452.png"
+          alt="Ejisuman SHS Logo"
+          class="img-fluid"
+          width="50"
+          height="50"
+        />
+        <a class="logo" href="../../index.html">
+          <h2 class="font-times-new-roman align-text-center fs-4">
+            EJISUMAN SENIOR HIGH SCHOOL
+          </h2>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation"
+          style="color: white"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end text-bg-dark"
+          tabindex="-1"
+          id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+              Account:
+            </h5>
+            <a class="btn btn-primary ml-2" href="../../Sign_In.html">Login</a>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../../index.html"
+                  >HOME</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../../Acad_Tab/Academic_Info.html"
+                  >ACADEMIC INFORMATION</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  ADMINISTRATION
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="../Teaching_Staff/Teaching_Staff.html"
+                      >TEACHING STAFF</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="../Non_Teaching_Staff/Non_Teaching_Staff.html"
+                      >NON-TEACHING STAFF</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../../Facilities/Facilities.html"
+                  >FACILITIES</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://ejisumanshs.blogspot.com/"
+                  >BLOG</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  ABOUT
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="../../About_Tab/History_Tab.html"
+                      >HISTORY</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="../../About_Tab/Our_Crest.html"
+                      >OUR CREST</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex mt-3" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!--End - Navigation-->
+
+    <!-- Non-Teaching Staff Content -->
+    <section>
+      <h1 class="text-center text-primary mb-4">Non-Teaching Staff</h1>
+      <div class="container mt-5 pt-5">
+        <h3 class="text-center" background-color="black">
+          Financial Department
+        </h3>
+        <div class="row">
+          <div class="col-md-3 mb-4">
+            <div class="value">
+              <div class="value-icon">
+                <img
+                  src="https://res.cloudinary.com/dq83xons7/image/upload/f_auto,w_786,c_fill/v1709488139/assets/adult-man-passport-size-photo-sample5-after.jpg"
+                  alt="Excellence Icon"
+                />
+              </div>
+              <h3>Rev.Dr.Mrs. ABC</h3>
+              <p>Main Headmistress (Administration)</p>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="value">
+              <div class="value-icon">
+                <img src="imgs\img_good_21.jpg" alt="Integrity Icon" />
+              </div>
+              <h3>Rev.Dr. ABC</h3>
+              <p>Assistant Head (Administration)</p>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="value">
+              <div class="value-icon">
+                <img
+                  src="https://www.primenewsghana.com/images/2023/feb/21/f6822cbb-b4f3-485b-942c-da08e1d47da1.jpg"
+                  alt="Innovation Icon"
+                />
+              </div>
+              <h3>Rev.Dr. ABC</h3>
+              <p>Assistant Head (Academic)</p>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="value">
+              <div class="value-icon">
+                <img src="imgs\unnamed.jpg" alt="Inclusivity Icon" />
+              </div>
+              <h3>Rev.Dr.Mrs. ABC</h3>
+              <p>Assistant Head (Domestic)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--End - Non-Teaching Staff Content-->
+
+    <!-- Non-Teaching Staff Content 2 -->
+    <section>
+      <div class="container mt-5 pt-5">
+        <div class="row">
+          <h3 class="text-center" background-color="black">Academic Board</h3>
+          <div class="col-md-3 mb-4">
+            <div class="value">
+              <div class="value-icon">
+                <img src="admins img 2.jpg" alt="Excellence Icon" />
+              </div>
+              <h3>Rev.Dr.Mrs. ABC</h3>
+              <p>Main Headmistress (Administration)</p>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="value">
+              <div class="value-icon">
+                <img src="imgs\img_good_21.jpg" alt="Integrity Icon" />
+              </div>
+              <h3>Rev.Dr. ABC</h3>
+              <p>Assistant Head (Administration)</p>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="value">
+              <div class="value-icon">
+                <img
+                  src="https://www.primenewsghana.com/images/2023/feb/21/f6822cbb-b4f3-485b-942c-da08e1d47da1.jpg"
+                  alt="Innovation Icon"
+                />
+              </div>
+              <h3>Rev.Dr. ABC</h3>
+              <p>Assistant Head (Academic)</p>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="value">
+              <div class="value-icon">
+                <img src="imgs\unnamed.jpg" alt="Inclusivity Icon" />
+              </div>
+              <h3>Rev.Dr.Mrs. ABC</h3>
+              <p>Assistant Head (Domestic)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--End - Non-Teaching Staff Content 2-->
+    <!-- Non-Teaching Staff Content -->
+    <section>
+      <div class="container mt-5 pt-5">
+        <h3 class="text-center" background-color="black">Cooking Staff</h3>
+        <div class="row">
+          <div class="col-md-3 mb-4">
+            <div class="value">
+              <div class="value-icon">
+                <img
+                  src="https://res.cloudinary.com/dq83xons7/image/upload/f_auto,w_786,c_fill/v1709488139/assets/adult-man-passport-size-photo-sample5-after.jpg"
+                  alt="Excellence Icon"
+                />
+              </div>
+              <h3>Rev.Dr.Mrs. ABC</h3>
+              <p>Main Headmistress (Administration)</p>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="value">
+              <div class="value-icon">
+                <img src="imgs\img_good_21.jpg" alt="Integrity Icon" />
+              </div>
+              <h3>Rev.Dr. ABC</h3>
+              <p>Assistant Head (Administration)</p>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="value">
+              <div class="value-icon">
+                <img
+                  src="https://www.primenewsghana.com/images/2023/feb/21/f6822cbb-b4f3-485b-942c-da08e1d47da1.jpg"
+                  alt="Innovation Icon"
+                />
+              </div>
+              <h3>Rev.Dr. ABC</h3>
+              <p>Assistant Head (Academic)</p>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="value">
+              <div class="value-icon">
+                <img src="imgs\unnamed.jpg" alt="Inclusivity Icon" />
+              </div>
+              <h3>Rev.Dr.Mrs. ABC</h3>
+              <p>Assistant Head (Domestic)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--End - Non-Teaching Staff Content-->
+
+    <!-- Non-Teaching Staff Content 2 -->
+    <section>
+      <div class="container mt-5 pt-5">
+        <h3 class="text-center" background-color="black">
+          Labourers and Cleaners
+        </h3>
+        <div class="row">
+          <div class="col-md-3 mb-4">
+            <div class="value">
+              <div class="value-icon">
+                <img src="admins img 2.jpg" alt="Excellence Icon" />
+              </div>
+              <h3>Rev.Dr.Mrs. ABC</h3>
+              <p>Main Headmistress (Administration)</p>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="value">
+              <div class="value-icon">
+                <img src="imgs\img_good_21.jpg" alt="Integrity Icon" />
+              </div>
+              <h3>Rev.Dr. ABC</h3>
+              <p>Assistant Head (Administration)</p>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="value">
+              <div class="value-icon">
+                <img
+                  src="https://www.primenewsghana.com/images/2023/feb/21/f6822cbb-b4f3-485b-942c-da08e1d47da1.jpg"
+                  alt="Innovation Icon"
+                />
+              </div>
+              <h3>Rev.Dr. ABC</h3>
+              <p>Assistant Head (Academic)</p>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="value">
+              <div class="value-icon">
+                <img src="imgs\unnamed.jpg" alt="Inclusivity Icon" />
+              </div>
+              <h3>Rev.Dr.Mrs. ABC</h3>
+              <p>Assistant Head (Domestic)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--End - Non-Teaching Staff Content 2-->
+
+    <!-- AI Assistant Button -->
+    <button
+      id="ai-assistant-btn"
+      class="btn btn-primary"
+      style="position: fixed; bottom: 20px; right: 20px"
+    >
+      Ask AI
+    </button>
+
+    <!-- AI Assistant Modal -->
+    <div
+      id="ai-assistant-modal"
+      class="modal fade"
+      tabindex="-1"
+      aria-labelledby="aiAssistantModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="aiAssistantModalLabel">
+              Ask AI Assistant
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div id="ai-assistant-chat">
+              <div
+                id="ai-assistant-messages"
+                class="mb-3"
+                style="max-height: 300px; overflow-y: auto"
+              ></div>
+              <input
+                type="text"
+                id="ai-assistant-input"
+                class="form-control"
+                placeholder="Ask about Ejisuman SHS or Yaa Asantewaa..."
+              />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              id="ai-assistant-send"
+              class="btn btn-primary"
+            >
+              Send
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Links Section -->
+    <section id="quick-links" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Quick Links</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div class="col">
+            <a
+              href="../Admin_Tab/Teaching_Staff/Teaching_Staff.html"
+              class="btn btn-outline-primary w-100"
+            >
+              Teaching Staff
+            </a>
+          </div>
+          <div class="col">
+            <a
+              href="../Admin_Tab/Non_Teaching_Staff/Non_Teaching_Staff.html"
+              class="btn btn-outline-primary w-100"
+            >
+              Non-Teaching Staff
+            </a>
+          </div>
+          <div class="col">
+            <a
+              href="../History/History_Tab.html"
+              class="btn btn-outline-primary w-100"
+            >
+              History
+            </a>
+          </div>
+          <div class="col">
+            <a
+              href="../Facilities/Facilities.html"
+              class="btn btn-outline-primary w-100"
+            >
+              Facilities
+            </a>
+          </div>
+          <div class="col">
+            <a
+              href="../../Acad_Tab/Academic_Info.html"
+              class="btn btn-outline-primary w-100"
+            >
+              Academic Information
+            </a>
+          </div>
+          <div class="col">
+            <a
+              href="https://ejisumanshs.blogspot.com/"
+              class="btn btn-outline-primary w-100"
+            >
+              Blog
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Ending - Quick Links -->
+
+    <!-- Starting - Footer -->
+    <footer class="text-white py-4" style="background-color: #02162b">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h3>Important Deadlines:</h3>
+            <marquee behavior="scroll" direction="left"
+              >WASSCE Registration Ends On: 20th December, 2024</marquee
+            >
+          </div>
+          <div class="col-md-4">
+            <h3>Contact Us:</h3>
+            <p>Email: info@ejisumanshs.edu.gh</p>
+            <a
+              class
+              name="btn btn-primary ml-3"
+              href="https://web.whatsapp.com/"
+              target="_blank"
+              >Phone: <i class="bi bi-whatsapp"></i>+233 244 027477
+            </a>
+          </div>
+          <div class="col-md-4 text-center">
+            <h3>Follow Us:</h3>
+            <a
+              href="https://web.facebook.com/share/g/SRP7cWYxLdkyDKAp/"
+              class="text-white me-3"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="https://x.com/ejisumanshs" class="text-white me-3"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/ejisumanseniorhighschool?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              class="text-white me-3"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.tiktok.com/@ejisumanshs"
+              class="text-white me-3"
+              ><i class="fab fa-tiktok"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/channel/UCejisumanshs"
+              class="text-white"
+              ><i class="fab fa-youtube"></i
+            ></a>
+          </div>
+        </div>
+        <hr />
+        <div class="text-center">
+          <p>&copy; 2024 Ejisuman Senior High School. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!--Ending - Footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document
+        .getElementById("ai-assistant-btn")
+        .addEventListener("click", function () {
+          var modal = new bootstrap.Modal(
+            document.getElementById("ai-assistant-modal")
+          );
+          modal.show();
+        });
+
+      document
+        .getElementById("ai-assistant-send")
+        .addEventListener("click", function () {
+          var input = document.getElementById("ai-assistant-input");
+          var message = input.value;
+          if (message.trim() !== "") {
+            var messages = document.getElementById("ai-assistant-messages");
+            var userMessage = document.createElement("div");
+            userMessage.classList.add("user-message");
+            userMessage.textContent = message;
+            messages.appendChild(userMessage);
+
+            // Simulate AI response
+            var aiMessage = document.createElement("div");
+            aiMessage.classList.add("ai-message");
+            aiMessage.textContent =
+              "This is a simulated response based on the question: " + message;
+            messages.appendChild(aiMessage);
+
+            input.value = "";
+            messages.scrollTop = messages.scrollHeight;
+          }
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2c3e50;
+  --background-color: #f8f9fa;
+  --text-color: #333;
+  --card-background: #ffffff;
+  --transition-speed: 0.3s;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.facilities-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.facilities-title {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.facilities-description {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+}
+
+.facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.facility-card {
+  background-color: var(--card-background);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform var(--transition-speed),
+    box-shadow var(--transition-speed);
+}
+
+.facility-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.facility-image-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+
+.facility-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-speed);
+}
+
+.facility-card:hover .facility-image {
+  transform: scale(1.05);
+}
+
+.facility-content {
+  padding: 1.5rem;
+}
+
+.facility-title {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.facility-description {
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.virtual-tour {
+  margin-top: 4rem;
+}
+
+.virtual-tour-title {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.virtual-tour-description {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  margin-bottom: 2rem;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .facilities-title {
+    font-size: 2rem;
+  }
+
+  .facilities-description {
+    font-size: 1rem;
+  }
+
+  .facility-card {
+    margin-bottom: 2rem;
+  }
+
+  .virtual-tour-title {
+    font-size: 1.75rem;
+  }
+
+  .virtual-tour-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .facilities-container {
+    padding: 1rem;
+  }
+
+  .facilities-title {
+    font-size: 1.75rem;
+  }
+
+  .facility-title {
+    font-size: 1.25rem;
+  }
+
+  .facility-description {
+    font-size: 0.9rem;
+  }
+}

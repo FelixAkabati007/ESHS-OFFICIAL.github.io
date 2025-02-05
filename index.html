@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejisuman Senior High School</title>
+    <link rel="icon" type="image/x-icon" href="imgs/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="ai-assistant.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        new SchoolAIAssistant();
+      });
+    </script>
+    <style>
+      /* Add custom styles here */
+      .form-control {
+        border: 2px solid #007bff; /* Stylish border */
+        border-radius: 10px; /* Rounded edges for modern feel */
+        padding: 10px; /* Spacious padding */
+        transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition */
+      }
+
+      .form-control:focus {
+        border-color: #0056b3; /* Darker border color on focus */
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.2); /* Glow effect on focus */
+      }
+    </style>
+  </head>
+  <body id="top">
+    <!-- starting - navbar class="navbar navbar-->
+    <nav class="navbar" style="background-color: #02162b">
+      <div class="container d-flex justify-content-between align-items-center">
+        <img
+          src="../../imgs/ejisuman logo-fotor-bg-remover-2024111252452.png"
+          alt="Ejisuman SHS Logo"
+          class="img-fluid"
+          width="50"
+          height="50"
+        />
+        <a class="logo" href="../../index.html">
+            <h2 class="font-times-new-roman align-text-center fs-3">
+            EJISUMAN SENIOR HIGH SCHOOL
+            </h2>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation"
+          style="color: white;"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end text-bg-dark"
+          tabindex="-1"
+          id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+              Account:
+            </h5>
+            <a class="btn btn-primary ml-2" href="Sign_In.html">Login</a>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../../index.html"
+                  >HOME</a
+                >
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="../../Acad_Tab/Academic_Info.html"
+                  >ACADEMIC INFORMATION</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  ADMINISTRATION
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="Admin_Tab/Teaching_Staff/Teaching_Staff.html"
+                      >TEACHING STAFF</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="Admin_Tab/Non_Teaching_Staff/Non_Teaching_Staff.html"
+                      >NON-TEACHING STAFF</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Facilities/Facilities.html"
+                  >FACILITIES</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://ejisumanshs.blogspot.com/"
+                  >BLOG</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  ABOUT
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li>
+                    <a class="dropdown-item" href="About_Tab/History_Tab.html"
+                      >HISTORY</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="About_Tab/Our_Crest.html"
+                      >OUR CREST</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex mt-3" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!--End - Navigation-->
+
+    <!--Important-Notice-->
+    <div
+      class="col-md-12"
+      style="white-space: nowrap; margin: 0; overflow: hidden"
+    >
+      <span
+        style="
+          background-color: #333333;
+          color: white;
+          padding: 4px;
+          display: inline-block;
+          margin-left: 0%;
+        "
+        >IMPORTANT DEADLINES:</span
+      >
+      <div
+        style="
+          overflow: hidden;
+          display: inline-block;
+          vertical-align: middle;
+          width: 70%;
+        "
+      >
+        <span
+          style="
+            display: inline-block;
+            white-space: nowrap;
+            animation: scroll-left 29s linear infinite;
+            color: rgb(0, 0, 0);
+            padding-left: 50%;
+          "
+        >
+          WASSCE Registration Ends On: 25th June, 2025
+        </span>
+      </div>
+    </div>
+
+    <style>
+      @keyframes scroll-left {
+        0% {
+          transform: translateX(100%); /* Start from far right */
+        }
+        100% {
+          transform: translateX(-100%); /* Move to the far left */
+        }
+      }
+
+      .col-md-12 {
+        overflow: hidden; /* Hide horizontal scrollbar */
+      }
+    </style>
+    <!--Ending-Important-Notice-->
+
+    <!-- Starting - Carousel-->
+    <div
+      id="carouselExampleAutoplaying"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="imgs/417396470_929068291928012_3435120046188306092_n.jpg"
+            class="d-block w-100"
+            alt="School event"
+          />
+          <div class="carousel-caption">
+            <strong class="admission-title">2025 ADMISSION</strong>
+            <div class="container">
+              <a class="button-container">
+                <button class="info-button" onclick="location.href='Admission/Admission.html'">
+                  2025 Admission
+                </button>
+                <button class="info-button" onclick="location.href='#recent-events-news'">
+                  News & Events
+                </button>
+                <button class="info-button" id="schoolNumberButton">
+                  School Number
+                </button>
+              </a>
+              <div id="infoDisplay" class="info-display">
+                <div class="note">
+                  <marquee behavior="scroll" direction="left"
+                    >To start your 2024/2025 online admission process, please
+                    click the button below and enter your index number. NB:
+                    Registration for admission is <b>"FREE"</b></marquee
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="imgs/417537846_929068501927991_5041865251957858405_n.jpg"
+            class="d-block w-100"
+            alt="School entrance"
+          />
+          <div class="carousel-caption">
+            <strong class="admission-title">2025 ADMISSION</strong>
+            <div class="container">
+              <a class="button-container">
+                <button class="info-button" onclick="location.href='Admission/Admission.html'">
+                  2025 Admission
+                </button>
+                <button class="info-button" onclick="location.href='#recent-events-news'">
+                  News & Events
+                </button>
+                <button class="info-button" id="schoolNumberButton">
+                  School Number
+                </button>
+              </a>
+              <div id="infoDisplay" class="info-display">
+                <div class="note">
+                  <marquee behavior="scroll" direction="left"
+                    >To start your 2025/2026 online admission process, please
+                    click the button below and enter your index number. NB:
+                    Registration for admission is <b>"FREE"</b></marquee
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="imgs/entrance new.png"
+            class="d-block w-100"
+            alt="School event"
+          />
+          <div class="carousel-caption">
+            <strong class="admission-title">2025 ADMISSION</strong>
+            <div class="container">
+              <a class="button-container">
+                <button class="info-button" onclick="location.href='Admission/Admission.html'">
+                  2025 Admission
+                </button>
+                <button class="info-button" onclick="location.href='#recent-events-news'">
+                  News & Events
+                </button>
+                <button class="info-button" id="schoolNumberButton">
+                  School Number
+                </button>
+              </a>
+              <div id="infoDisplay" class="info-display">
+                <div class="note">
+                  <marquee behavior="scroll" direction="left"
+                    >To start your 2025/2026 online admission process, please
+                    click the button below and enter your index number. NB:
+                    Registration for admission is <b>"FREE"</b></marquee
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- Ending - Carousel-->
+
+    <!-- Starting-Afiliate-Section-->
+    <section id="Affiliates" class="py-5 bg-light">
+      <div class="Affiliates">
+        <img
+          src="imgs/logo2.png"
+          class="center w-40 mb-3"
+          height="200"
+          alt="School logo"
+        />
+        <img
+          src="imgs/ges.jpg"
+          class="center w-40 mb-3"
+          height="200"
+          alt="Ghana Education Service logo"
+        />
+      </div>
+    </section>
+    <!-- Ending Affiliates -->
+
+    <!-- Starting - History -->
+     <section id="History" class="py-5 bg-light">
+      <div class="About-Content" >
+        <h1 class="text-center text-primary mb-4">History</h1>
+        <main>
+          <section id="teachers">
+            <section id="about" class="container">
+              <div class="core-values">
+                <div class="value">
+                  <div class="value-icon">
+                    <div class="history">
+                      <div class="history-content">
+                        <h3>Established in 1970</h3>
+                        <p>
+                          Ejisuman Senior High School's journey to becoming a respected
+                          institution in Ghana began with its establishment in 1970.
+                          Originally founded with a mission to provide quality education
+                          to the youth of the Ashanti Region, the school has steadily
+                          grown in reputation and size over the years.
+                        </p>
+                        <p>
+                          The school continues to evolve and adapt, embracing modern
+                          teaching methods and technology to ensure students receive the
+                          best education possible. The school's success stories are a
+                          testament to its unwavering commitment to developing
+                          well-rounded individuals who go on to make significant
+                          contributions to society, both locally and internationally.
+                          Today, Ejisuman SHS stands as a beacon of excellence and a
+                          source of pride for the Ashanti Region and beyond.
+                        </p>
+                      </div>
+                    </div>
+                  </section>
+                </section>
+              </main>
+            </div>
+     </section>
+    
+          <!-- end-History -->
+
+    <!--starting-School-Administrators-->
+    <section id="values" class="py-5 bg-light">
+      <div class="container">
+      <h1 class="text-center text-primary mb-4">Our Administrators</h1>
+      <div class="core-values">
+        <div class="value">
+          <div class="value-icon">
+            <img
+              src="https://ladma.gov.gh/wp-content/uploads/2022/02/GEA.jpg"
+              alt="Excellence Icon"
+            />
+          </div>
+          <h3>Rev.Dr.Mrs. ABC</h3>
+          <p>Main Headmistress (Administration)</p>
+        </div>
+        <div class="value">
+          <div class="value-icon">
+            <img src="imgs\img_good_21.jpg" alt="Integrity Icon" />
+          </div>
+          <h3>Rev.Dr. ABC</h3>
+          <p>Assistant Head (Administration)</p>
+        </div>
+        <div class="value">
+          <div class="value-icon">
+            <img
+              src="https://www.primenewsghana.com/images/2023/feb/21/f6822cbb-b4f3-485b-942c-da08e1d47da1.jpg"
+              alt="Innovation Icon"
+            />
+          </div>
+          <h3>Rev.Dr. ABC</h3>
+          <p>Assistant Head (Academic)</p>
+        </div>
+        <div class="value">
+          <div class="value-icon">
+            <img src="imgs\unnamed.jpg" alt="Inclusivity Icon" />
+          </div>
+          <h3>Rev.Dr.Mrs. ABC</h3>
+          <p>Assistant Head (Domestic)</p>
+        </div>
+      </div>
+      </div>
+    </section>
+    <!-- Ending School-Administrators-->
+
+    <!-- Starting - Recent Events & News -->
+    <section>
+      <section id="recent-events-news" class="py-5 bg-light">
+        <div class="container">
+          <h2 class="text-center text-primary mb-4">Recent Events & News</h2>
+          <div
+            id="eventsCarousel"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <!-- Slide 1 -->
+              <div class="carousel-item active">
+                <div class="event-content d-flex align-items-center flex-wrap">
+                  <div class="event-image">
+                    <img
+                      src="../imgs/MoE.jpg"
+                      class="img-fluid rounded"
+                      alt="Minister of Education"
+                    />
+                    <h5 class="mt-3">Hon. Yaw Osei Adutwum</h5>
+                    <p>(Minister of Education)</p>
+                  </div>
+                  <div class="event-text">
+                    <h3 class="mb-3">
+                      "Empowering Tomorrow's Leaders: Ejisuman Senior High
+                      School Visits Ministry of Education for Educational
+                      Insights"
+                    </h3>
+                    <p>
+                      Hon. Yaw Osei Adutwum was pleased to welcome some students
+                      and teachers of Ejisuman Senior High School for a courtesy
+                      call after his recent visit to their school. He was
+                      delighted to fulfill his promise of inviting them to the
+                      Ministry of Education to provide them with a firsthand
+                      experience of the workings of our education system.
+                    </p>
+                    <a
+                      href="https://moe.gov.gh/index.php/2024/02/29/empowering-tomorrows-leaders-ejisuman-senior-high-school-visits-ministry-of-education-for-educational-insights/"
+                      class="btn btn-primary"
+                    >
+                      Read More
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="carousel-item">
+                <div class="event-content d-flex align-items-center flex-wrap">
+                  <div class="event-image">
+                    <img
+                      src="..\imgs\305752815_488264239975475_6265696827532764525_n.jpg"
+                      class="img-fluid rounded"
+                      alt="STEM Lab at Ejisuman SHS"
+                    />
+                    <h5 class="mt-3">STEM Education Initiative</h5>
+                    <p>(Science and Technology in Action)</p>
+                  </div>
+                  <div class="event-text">
+                    <h3 class="mb-3">
+                      "Ejisuman Senior High School Launches State-of-the-Art
+                      STEM Laboratory"
+                    </h3>
+                    <p>
+                      In a groundbreaking move to promote science and technology
+                      education, Ejisuman SHS inaugurated its STEM laboratory
+                      with modern equipment to enhance hands-on learning in
+                      physics, chemistry, biology, and robotics. The initiative
+                      aims to prepare students for careers in science and
+                      technology.
+                    </p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="carousel-item">
+                <div class="event-content d-flex align-items-center flex-wrap">
+                  <div class="event-image">
+                    <h5 class="mt-3">(SRC) Week in 2024</h5>
+                    <iframe
+                      width="380"
+                      height="300"
+                      src="https://www.youtube.com/embed/rCtCPgOkflc?si=705sXStAjlOYIfSs"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                    ></iframe>
+                    <p>(Celebrating Our Heritage)</p>
+                  </div>
+                  <div class="event-text">
+                    <h3 class="mb-3">
+                      "Ejisuman Senior High School Celebrates SRC Week 2024"
+                    </h3>
+                    <p>
+                      Ejisuman Senior High School recently celebrated its annual
+                      Students' Representative Council (SRC) Week in 2024. The
+                      event featured academic competitions, cultural
+                      performances, and community service activities. The
+                      highlight was a grand float parade and a special
+                      performance by Yaw Tog. The week-long celebration fostered
+                      unity, creativity, and leadership among students,
+                      showcasing their talents and dedication...
+                    </p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 4 -->
+              <div class="carousel-item">
+                <div class="event-content d-flex align-items-center flex-wrap">
+                  <div class="event-image">
+                    <img
+                      src="..\imgs\449679956_527620749623606_3286520815248241865_n.jpg"
+                      class="img-fluid rounded"
+                      alt="Quiz Competition Winners"
+                    />
+                    <h5 class="mt-3">Quiz Competition Champions</h5>
+                    <p>(Inter-School Brilliance)</p>
+                  </div>
+                  <div class="event-text">
+                    <h3 class="mb-3">
+                      "Ejisuman SHS Emerges Victorious in Regional Quiz
+                      Competition"
+                    </h3>
+                    <p>
+                      The school's quiz team made headlines by winning the
+                      Ashanti Regional Inter-School Quiz Competition. The team
+                      impressed judges with their exceptional knowledge in
+                      science, mathematics, and current affairs, earning a
+                      trophy and scholarships for the participants.
+                    </p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Carousel controls -->
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#eventsCarousel"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#eventsCarousel"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- Ending - Recent Events & News -->
+
+    <!-- Starting Core Values Section -->
+<section id="values" class="container">
+    <h2>Core Values</h2>
+    <div class="core-values">
+      <div class="value">
+        <div class="value-icon">
+          <img src="imgs\pngegg.png" alt="Excellence Icon">
+        </div>
+        <h3>Excellence</h3>
+        <p>Striving for the highest standards in all our endeavors</p>
+      </div>
+      <div class="value">
+        <div class="value-icon">
+          <img src="imgs\pngegg (1).png" alt="Integrity Icon">
+        </div>
+        <h3>Sincerity</h3>
+        <p>Upholding honesty, ethics, and transparency in all actions</p>
+      </div>
+      <div class="value">
+        <div class="value-icon">
+          <img src="imgs\classroom-icon.png" alt="Innovation Icon">
+        </div>
+        <h3>Efficiency</h3>
+        <p>Embracing creativity and forward-thinking approaches</p>
+      </div>
+      <div class="value">
+        <div class="value-icon">
+          <img src="imgs\collaboration-cooperation-clip-art-community-c6056ee8645dcef9c25f551530a3645a.png" alt="Inclusivity Icon">
+        </div>
+        <h3>Collaboration</h3>
+        <p>Fostering a diverse and welcoming community for all</p>
+      </div>
+    </div>
+  </section>
+  <!-- Ending Core Values Section -->
+
+    <!-- AI Assistant Button -->
+    <button id="ai-assistant-btn" class="btn">Ask AI</button>
+
+    <!-- AI Assistant Modal -->
+    <div
+      id="ai-assistant-modal"
+      class="modal fade"
+      tabindex="-1"
+      aria-labelledby="aiAssistantModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="aiAssistantModalLabel">ESEC AI Assistant</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div id="ai-assistant-chat">
+              <div
+                id="ai-assistant-messages"
+                class="mb-3"
+                style="max-height: 300px; overflow-y: auto"
+              ></div>
+              <input
+                type="text"
+                id="ai-assistant-input"
+                class="form-control"
+                placeholder="Ask about Ejisuman SHS or Yaa Asantewaa..."
+              />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              id="ai-assistant-send"
+              class="btn btn-primary"
+            >
+              Send
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Ending AI Assistant Modal -->
+
+    <!-- Testimonials Section -->
+<div class="row">
+  <div class="col-md-12 mb-4">
+    <section id="teachers" class="container">
+        <h2 class="mt-4">What Our Alumni Say</h2>
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="d-flex justify-content-center">
+                <div class="testimonial text-center">
+                  <p class="testimonial-text fst-italic">
+                    "Ejisuman Senior High School provided me with the foundation I needed to succeed in my career. The teachers were supportive and the environment was conducive to learning."
+                  </p>
+                  <p class="testimonial-author fw-bold">- Alumni A</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="d-flex justify-content-center">
+                <div class="testimonial text-center">
+                  <p class="testimonial-text fst-italic">
+                    "I am grateful for the opportunities I had at Ejisuman Senior High School. The extracurricular activities helped me develop my leadership skills."
+                  </p>
+                  <p class="testimonial-author fw-bold">- Alumni B</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="d-flex justify-content-center">
+                <div class="testimonial text-center">
+                  <p class="testimonial-text fst-italic">
+                    "The academic support at Ejisuman Senior High School was exceptional. The teachers went above and beyond to ensure we understood the material."
+                  </p>
+                  <p class="testimonial-author fw-bold">- Alumni C</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+    </section>
+  </div>
+</div>
+
+<section id="share-experience" class="container mt-5">
+  <div class="row">
+    <div class="col-md-12 mb-4">
+      <section id="teachers">
+          <h2 class="mt-4">Share Your Experience</h2>
+          <form id="testimonialForm" class="p-4 border rounded shadow">
+            <div class="mb-3">
+              <label for="alumniName" class="form-label">Name</label>
+              <input type="text" class="form-control" id="alumniName" placeholder="Enter your name" required>
+            </div>
+            <div class="mb-3">
+              <label for="alumniTestimonial" class="form-label">Testimonial</label>
+              <textarea class="form-control" id="alumniTestimonial" rows="3" placeholder="Share your experience" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-20 align-right">Submit</button>
+          </form>
+      </section>
+    </div>
+  </div>
+</section>
+
+
+<script>
+  document.getElementById('testimonialForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById('alumniName').value;
+    const testimonial = document.getElementById('alumniTestimonial').value;
+
+    const newTestimonial = document.createElement('div');
+    newTestimonial.classList.add('carousel-item');
+
+    const testimonialContent = `
+      <div class="d-flex justify-content-center">
+        <div class="testimonial text-center">
+          <p class="testimonial-text fst-italic">${testimonial}</p>
+          <p class="testimonial-author fw-bold">- ${name}</p>
+        </div>
+      </div>
+    `;
+
+    newTestimonial.innerHTML = testimonialContent;
+
+    const carouselInner = document.querySelector('#testimonialCarousel .carousel-inner');
+    carouselInner.appendChild(newTestimonial);
+
+    // Clear the form
+    document.getElementById('testimonialForm').reset();
+
+    // Activate the new testimonial
+    const items = carouselInner.querySelectorAll('.carousel-item');
+    items.forEach((item) => item.classList.remove('active'));
+    newTestimonial.classList.add('active');
+  });
+</script>
+  <!-- End - Testimonial -->
+
+     <!-- Quick Links Section -->
+    <section id="quick-links" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Quick Links</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div class="col">
+            <a href="../Admin_Tab/Teaching_Staff/Teaching_Staff.html" class="btn btn-outline-primary w-100">
+              Teaching Staff
+            </a>
+          </div>
+          <div class="col">
+            <a href="../Admin_Tab/Non_Teaching_Staff/Non_Teaching_Staff.html" class="btn btn-outline-primary w-100">
+              Non-Teaching Staff
+            </a>
+          </div>
+          <div class="col">
+            <a href="../History/History_Tab.html" class="btn btn-outline-primary w-100">
+              History
+            </a>
+          </div>
+          <div class="col">
+            <a href="../Facilities/Facilities.html" class="btn btn-outline-primary w-100">
+              Facilities
+            </a>
+          </div>
+          <div class="col">
+            <a href="../../Acad_Tab/Academic_Info.html" class="btn btn-outline-primary w-100">
+              Academic Information
+            </a>
+          </div>
+          <div class="col">
+            <a href="https://ejisumanshs.blogspot.com/" class="btn btn-outline-primary w-100">
+              Blog
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Starting - Footer -->
+    <footer class="text-white py-4" style="background-color: #02162b">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h3>Important Deadlines:</h3>
+            <marquee behavior="scroll" direction="left"
+              >WASSCE Registration Ends On: 20th December, 2024</marquee
+            >
+          </div>
+          <div class="col-md-4">
+            <h3>Contact Us:</h3>
+            <p>Email: info@ejisumanshs.edu.gh</p>
+            <a
+              class
+              name="btn btn-primary ml-3"
+              href="https://web.whatsapp.com/"
+              target="_blank"
+              >Phone: <i class="bi bi-whatsapp"></i>+233 244 027477
+            </a>
+          </div>
+          <div class="col-md-4 text-center">
+            <h3>Follow Us:</h3>
+            <a
+              href="https://web.facebook.com/share/g/SRP7cWYxLdkyDKAp/"
+              class="text-white me-3"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="https://x.com/ejisumanshs" class="text-white me-3"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/ejisumanseniorhighschool?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              class="text-white me-3"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.tiktok.com/@ejisumanshs"
+              class="text-white me-3"
+              ><i class="fab fa-tiktok"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/channel/UCejisumanshs"
+              class="text-white"
+              ><i class="fab fa-youtube"></i
+            ></a>
+          </div>
+        </div>
+        <hr />
+        <div class="text-center">
+          <p>&copy; 2024 Ejisuman Senior High School. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!--Ending - Footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const assistantBtn = document.getElementById("ai-assistant-btn");
+        const assistantModal = new bootstrap.Modal(
+          document.getElementById("ai-assistant-modal")
+        );
+        const assistantInput = document.getElementById("ai-assistant-input");
+        const assistantSend = document.getElementById("ai-assistant-send");
+        const assistantMessages = document.getElementById(
+          "ai-assistant-messages"
+        );
+
+        // Show the modal when the assistant button is clicked
+        assistantBtn.addEventListener("click", function () {
+          assistantModal.show();
+        });
+
+        // Send message when the send button is clicked
+        assistantSend.addEventListener("click", function () {
+          sendMessage();
+        });
+
+        // Send message when Enter key is pressed
+        assistantInput.addEventListener("keypress", function (event) {
+          if (event.key === "Enter") {
+            event.preventDefault();
+            sendMessage();
+          }
+        });
+
+        async function sendMessage() {
+          const message = assistantInput.value.trim();
+          if (message !== "") {
+            const userMessage = document.createElement("div");
+            userMessage.classList.add("user-message");
+            userMessage.textContent = message;
+            assistantMessages.appendChild(userMessage);
+
+            // Scroll to bottom
+            assistantMessages.scrollTop = assistantMessages.scrollHeight;
+
+            // OpenAI API configuration
+            const apiConfig = {
+              model: "gpt-4o-mini",
+              messages: [{ role: "user", content: message }],
+              response_format: {
+                type: "text",
+              },
+              temperature: 1,
+              max_completion_tokens: 2048,
+              top_p: 1,
+              frequency_penalty: 0,
+              presence_penalty: 0,
+            };
+
+            // Call OpenAI API
+            try {
+              const aiResponse = await fetch(
+                "https://api.openai.com/v1/completions",
+                {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer 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`,
+                  },
+                  body: JSON.stringify(apiConfig),
+                }
+              );
+
+              const data = await aiResponse.json();
+              const aiText = data.choices[0].text.trim();
+
+              const aiMessage = document.createElement("div");
+              aiMessage.classList.add("ai-message");
+              aiMessage.textContent = aiText;
+              assistantMessages.appendChild(aiMessage);
+            } catch (error) {
+              const aiMessage = document.createElement("div");
+              aiMessage.classList.add("ai-message");
+              aiMessage.textContent = "Error: Unable to fetch AI response.";
+              assistantMessages.appendChild(aiMessage);
+            }
+
+            assistantInput.value = "";
+            assistantMessages.scrollTop = assistantMessages.scrollHeight;
+          }
+        }
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          document.getElementById("admissionButton").addEventListener("click", function() {
+              window.location.href = 'Admission.html';
+          });
+      });
+  </script>
+  <div id="requirements">
+    <h2>Requirements</h2>
+    <pre></pre>
+  </div>
+  <div id="data">
+    <h2>Data</h2>
+    <pre></pre>
+  </div>
+  </body>
+</html>
